@@ -1,0 +1,878 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32936,        869]
+NotebookOptionsPosition[     32027,        836]
+NotebookOutlinePosition[     32369,        851]
+CellTagsIndexPosition[     32326,        848]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"q", "[", 
+   RowBox[{"x_", ",", " ", "l_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", " ", "=", " ", 
+       FractionBox["1", 
+        RowBox[{"2", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"Log10", "[", "l", "]"}]}]}], ")"}]}]]}], ",", 
+      RowBox[{"w", " ", "=", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox["1", 
+          RowBox[{"2", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"2", " ", 
+              RowBox[{"Log10", "[", "l", "]"}]}]}], ")"}]}]], ")"}], 
+        FractionBox[
+         RowBox[{"-", "1"}], "l"]]}]}], "}"}], ",", 
+    RowBox[{"+", 
+     RowBox[{"Piecewise", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"x", "\[LessEqual]", " ", "a"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"1", " ", "+", " ", 
+           RowBox[{"Floor", "[", 
+            FractionBox[
+             RowBox[{"Log10", "[", 
+              FractionBox["x", "a"], "]"}], 
+             RowBox[{"Log10", "[", "w", "]"}]], "]"}]}], ",", 
+          RowBox[{"a", "<", "x", "\[LessEqual]", " ", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"l", " ", "+", "1", " ", "+", " ", 
+           RowBox[{"Floor", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{"Log10", "[", 
+               RowBox[{"a", " ", "x"}], "]"}], " ", "+", " ", 
+              RowBox[{"(", 
+               RowBox[{"l", "*", " ", 
+                RowBox[{"Log10", "[", "w", "]"}]}], ")"}]}], 
+             RowBox[{"Log10", "[", "w", "]"}]], "]"}]}], ",", 
+          RowBox[{"1", "<", "x", "\[LessEqual]", " ", 
+           FractionBox["1", "a"]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"2", " ", "l"}], " ", "+", " ", "1"}], ",", 
+          RowBox[{"x", ">", 
+           FractionBox["1", "a"]}]}], "}"}]}], "}"}], "]"}]}]}], " ", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6369966296419396`*^9, 3.6369966317459087`*^9}, {
+   3.636996794855246*^9, 3.6369968988852086`*^9}, 3.6369969386328125`*^9, {
+   3.636996996918419*^9, 3.636997086991741*^9}, {3.6369971670348563`*^9, 
+   3.636997339589944*^9}, {3.6369973886147842`*^9, 3.6369973998057585`*^9}, {
+   3.636997449402229*^9, 3.6369974549159126`*^9}, {3.636997527303386*^9, 
+   3.6369975755626345`*^9}, {3.636997769308011*^9, 3.636997775353649*^9}, {
+   3.6369979661257324`*^9, 3.6369979934248962`*^9}, {3.636998216315479*^9, 
+   3.6369982270804644`*^9}, {3.636998270237544*^9, 3.6369982735344505`*^9}, {
+   3.6369996104333506`*^9, 3.6369996116677337`*^9}, 3.6953231527031393`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"q", "[", 
+      RowBox[{"x", ",", "l"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "6"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Price Relative\>\"", ",", "\"\<Integer\>\""}], "}"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"l", ",", "1", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6369974844446554`*^9, 3.6369974871797247`*^9}, {
+   3.6369976135578814`*^9, 3.6369976840467453`*^9}, 3.636997826414105*^9, {
+   3.636998404238288*^9, 3.636998404941367*^9}, {3.63699870843086*^9, 
+   3.6369987086495457`*^9}, {3.636999254440915*^9, 3.636999260046365*^9}, {
+   3.636999337517316*^9, 3.636999340630229*^9}, {3.6369993907521243`*^9, 
+   3.6369994193661623`*^9}, {3.6370110588297405`*^9, 
+   3.6370110590937753`*^9}, {3.6953232051002216`*^9, 
+   3.6953232416795893`*^9}, {3.695323287884122*^9, 3.695323358620817*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`l$$ = 4., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`l$$], 1, 10}}, Typeset`size$$ = {360., {96., 101.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`l$1252$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`l$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`l$$, $CellContext`l$1252$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`q[$CellContext`x, $CellContext`l$$], {$CellContext`x, 0, 
+         6}, AxesLabel -> {"Price Relative", "Integer"}], 
+      "Specifications" :> {{$CellContext`l$$, 1, 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {155., 162.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6953233593707805`*^9, 3.6971071093131747`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"l", "=", "4.`"}], "}"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"q", "[", 
+      RowBox[{"x", ",", "l"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "6"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Price Relative\>\"", ",", "\"\<Integer\>\""}], "}"}]}]}], 
+    "]"}]}], "]"}]], "Input",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695323575568343*^9}],
+
+Cell[RawData["\<\
+Cell[BoxData[
+
+ TagBox[
+
+  StyleBox[
+
+   DynamicModuleBox[{$CellContext`l$$ = 8 $CellContext`\\[AliasDelimiter], 
+
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+
+    Typeset`bookmarkMode$$ = \"Menu\", Typeset`animator$$, Typeset`animvar$$ = 
+
+    1, Typeset`name$$ = \"\\\"untitled\\\"\", Typeset`specs$$ = {{
+
+      Hold[$CellContext`l$$], 1, 10}}, Typeset`size$$ = {885., {270., 273.}}, 
+
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+
+    True, $CellContext`l$1320$$ = 0}, 
+
+    DynamicBox[Manipulate`ManipulateBoxes[
+
+     1, StandardForm, \"Variables\" :> {$CellContext`l$$ = 1}, 
+
+      \"ControllerVariables\" :> {
+
+        Hold[$CellContext`l$$, $CellContext`l$1320$$, 0]}, 
+
+      \"OtherVariables\" :> {
+
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+
+         Typeset`skipInitDone$$}, \"Body\" :> Plot[
+
+        $CellContext`q[$CellContext`x, $CellContext`l$$], {$CellContext`x, 0, 
+
+         6}], \"Specifications\" :> {{$CellContext`l$$, 1, 10}}, 
+
+      \"Options\" :> {}, \"DefaultOptions\" :> {}],
+
+     ImageSizeCache->{936., {328., 335.}},
+
+     SingleEvaluation->True],
+
+    Deinitialization:>None,
+
+    DynamicModuleValues:>{},
+
+    SynchronousInitialization->True,
+
+    UnsavedVariables:>{Typeset`initDone$$},
+
+    UntrackedVariables:>{Typeset`size$$}], \"Manipulate\",
+
+   Deployed->True,
+
+   StripOnInput->False],
+
+  Manipulate`InterpretManipulate[1]]], \"Output\",
+
+ CellChangeTimes->{
+
+  3.6369976875467324`*^9, 3.6369977872264996`*^9, 3.636997826960924*^9, 
+
+   3.6369979978948927`*^9, 3.6369982466864166`*^9, 3.63699828091568*^9, 
+
+   3.6369984056445065`*^9, 3.6369987144464607`*^9, {3.636999255636221*^9, 
+
+   3.636999260702614*^9}, 3.6369994201474123`*^9, 3.6370110609538918`*^9, 
+
+   3.6370375615868483`*^9}]\
+\>"], "Output"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.636997440224879*^9, 3.636997446308198*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    FractionBox["1", 
+     RowBox[{"2", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"Log10", "[", "l", "]"}]}]}], ")"}]}]], ")"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"l", ",", "1", ",", "10"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "10"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0.6"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6369985561982393`*^9, 3.6369985678496876`*^9}, {
+  3.6369991055801387`*^9, 3.6369991115176926`*^9}, {3.6369991882340803`*^9, 
+  3.6369991912441273`*^9}, {3.6369992389004383`*^9, 3.6369992430879745`*^9}, {
+  3.6369992858666587`*^9, 3.636999295926819*^9}, {3.6369993504535947`*^9, 
+  3.636999372900899*^9}, {3.636999535592867*^9, 3.636999561682822*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+    1.], LineBox[CompressedData["
+1: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
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{481., Automatic},
+  Method->{"DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None},
+  PlotRange->{{0, 10}, {0, 0.6}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.636998569985748*^9, 3.6369991121583223`*^9, 3.636999192978532*^9, 
+   3.6369992455324683`*^9, {3.6369992902861366`*^9, 3.6369992965737267`*^9}, {
+   3.6369993656480465`*^9, 3.636999374056075*^9}, {3.6369995381397223`*^9, 
+   3.6369995619484406`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox["1", 
+      RowBox[{"2", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"2", " ", 
+          RowBox[{"Log10", "[", "l", "]"}]}]}], ")"}]}]], ")"}], 
+    FractionBox[
+     RowBox[{"-", "1"}], "l"]], ",", 
+   RowBox[{"{", 
+    RowBox[{"l", ",", "1", ",", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "10"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "2.2"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.636998908625169*^9, 3.6369990721948595`*^9}, {
+  3.6369991298605103`*^9, 3.6369991618132973`*^9}, {3.6369992719474955`*^9, 
+  3.636999272749558*^9}, {3.636999578024847*^9, 3.6369995782436028`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+    1.], LineBox[CompressedData["
+1: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
+vlxuhFJtfu24eIuGoxYBgeZKxkjG0zOaKKJBsXFl0heuMVqtGy5IT6dBu8Ry
+CfupMXIub2cxjuPeRqrFypiboGqf5PpWLg3bL6it+/2UCeL8dz/B04+GSVtj
+d/4HE8QkUiMqPWigW3Rn9BCJlO43JPohGoJKrBY9zSNReFXgyxwrGl4v48rv
+LCDRlDzT3wfbsan0C3WJRImlPyYMsFn9rDK9v0lkJ3/MtcSShlc6cmYHSkk0
+GbLH65YFDQ6pvQaatSTi7Yww+N8SGjSjEucFvCBR8seXaXqLaEiUfkiJ2/B+
+ykOnfnMaqHMTHakdJEr7ViEpxn5euT/9TieJNE8fy1yCnTDsrajQQyKnA01s
+JzYNozs4sjVDJJoZkJMKXYDfmS97P7l8JlGYyqSzBfazmKLm3i8kqjJrTRfN
+p6E4U+vk3BESDX2RcjqBvaNNithOk2jVorMq2WY0PPW17xsRkkjjk12eD/by
+b9H1CWMkQj73FhtjqzC+x1ZMkOh4BCuswpSGuOz5vo5T+H+Vae0I7K+m/iu7
+pklE7Clqs8X2vpmvGzpLImaoUuoMSUOLY9eEREKizIUrNzdh/x9/pyFP
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{510., Automatic},
+  Method->{"DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None},
+  PlotRange->{{0, 10}, {0, 2.2}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.636998933889152*^9, 3.6369989470273285`*^9}, {
+   3.6369989888933697`*^9, 3.63699907292925*^9}, 3.636999273046362*^9, 
+   3.636999579126802*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ FormBox[Cell[BoxData[
+   FormBox[GridBox[{
+      {Cell[TextData[Cell[BoxData[{"{", "\n", "\[Null]"}], "InlineFormula"]]],
+        Cell[TextData[Cell[BoxData[
+        BoxData[
+         FormBox[
+          GridBox[{{
+             Cell[
+              TextData[{
+                Cell["0", "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["x", "TI"], "\[LessEqual]", 
+                   StyleBox["a", "TI"]}], "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   RowBox[{"\[LeftFloor]", 
+                    FractionBox[
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    FractionBox[
+                    StyleBox["x", "TI"], 
+                    StyleBox["a", "TI"]], ")"}], 
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    StyleBox["w", "TI"], ")"}]], "\[RightFloor]"}], "+", 
+                   "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["a", "TI"], "<", 
+                   StyleBox["x", "TI"], "\[LessEqual]", "1"}], 
+                 "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   RowBox[{"\[LeftFloor]", 
+                    FractionBox[
+                    RowBox[{
+                    StyleBox["l", "TI"], 
+                    SubscriptBox["log", "10"], 
+                    RowBox[{"(", 
+                    StyleBox["w", "TI"], ")"}], "+", 
+                    SubscriptBox["log", "10"], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["a", "TI"], 
+                    StyleBox["x", "TI"]}], ")"}]}], 
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    StyleBox["w", "TI"], ")"}]], "\[RightFloor]"}], "+", 
+                   StyleBox["l", "TI"], "+", "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{"1", "<", 
+                   StyleBox["x", "TI"], "\[LessEqual]", 
+                   FractionBox["1", 
+                    StyleBox["a", "TI"]]}], "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{"2", 
+                   StyleBox["l", "TI"], "+", "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["x", "TI"], ">", 
+                   FractionBox["1", 
+                    StyleBox["a", "TI"]]}], "InlineFormula"]}]]}}, 
+           ColumnAlignments -> {Center, Center}], TraditionalForm]]], 
+        "InlineFormula"]]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {Center, {Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}], TraditionalForm]]], 
+  TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[Cell[BoxData[
+   FormBox[GridBox[{
+      {Cell[TextData[Cell[BoxData[{"{", "\n", "\[Null]"}], "InlineFormula"]]],
+        Cell[TextData[Cell[BoxData[
+        BoxData[
+         FormBox[
+          GridBox[{{
+             Cell[
+              TextData[{
+                Cell["0", "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["x", "TI"], "\[LessEqual]", 
+                   StyleBox["a", "TI"]}], "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   RowBox[{"\[LeftFloor]", 
+                    FractionBox[
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    FractionBox[
+                    StyleBox["x", "TI"], 
+                    StyleBox["a", "TI"]], ")"}], 
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    StyleBox["w", "TI"], ")"}]], "\[RightFloor]"}], "+", 
+                   "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["a", "TI"], "<", 
+                   StyleBox["x", "TI"], "\[LessEqual]", "1"}], 
+                 "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   RowBox[{"\[LeftFloor]", 
+                    FractionBox[
+                    RowBox[{
+                    StyleBox["l", "TI"], 
+                    SubscriptBox["log", "10"], 
+                    RowBox[{"(", 
+                    StyleBox["w", "TI"], ")"}], "+", 
+                    SubscriptBox["log", "10"], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["a", "TI"], 
+                    StyleBox["x", "TI"]}], ")"}]}], 
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    StyleBox["w", "TI"], ")"}]], "\[RightFloor]"}], "+", 
+                   StyleBox["l", "TI"], "+", "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{"1", "<", 
+                   StyleBox["x", "TI"], "\[LessEqual]", 
+                   FractionBox["1", 
+                    StyleBox["a", "TI"]]}], "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{"2", 
+                   StyleBox["l", "TI"], "+", "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["x", "TI"], ">", 
+                   FractionBox["1", 
+                    StyleBox["a", "TI"]]}], "InlineFormula"]}]]}}, 
+           ColumnAlignments -> {Center, Center}], TraditionalForm]]], 
+        "InlineFormula"]]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {Center, {Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}], TraditionalForm]]], 
+  TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[Cell[BoxData[
+   FormBox[GridBox[{
+      {Cell[TextData[Cell[BoxData[{"{", "\n", "\[Null]"}], "InlineFormula"]]],
+        Cell[TextData[Cell[BoxData[
+        BoxData[
+         FormBox[
+          GridBox[{{
+             Cell[
+              TextData[{
+                Cell["0", "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["x", "TI"], "\[LessEqual]", 
+                   StyleBox["a", "TI"]}], "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   RowBox[{"\[LeftFloor]", 
+                    FractionBox[
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    FractionBox[
+                    StyleBox["x", "TI"], 
+                    StyleBox["a", "TI"]], ")"}], 
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    StyleBox["w", "TI"], ")"}]], "\[RightFloor]"}], "+", 
+                   "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["a", "TI"], "<", 
+                   StyleBox["x", "TI"], "\[LessEqual]", "1"}], 
+                 "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   RowBox[{"\[LeftFloor]", 
+                    FractionBox[
+                    RowBox[{
+                    StyleBox["l", "TI"], 
+                    SubscriptBox["log", "10"], 
+                    RowBox[{"(", 
+                    StyleBox["w", "TI"], ")"}], "+", 
+                    SubscriptBox["log", "10"], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["a", "TI"], 
+                    StyleBox["x", "TI"]}], ")"}]}], 
+                    RowBox[{
+                    SubscriptBox["log", "10"], "(", 
+                    StyleBox["w", "TI"], ")"}]], "\[RightFloor]"}], "+", 
+                   StyleBox["l", "TI"], "+", "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{"1", "<", 
+                   StyleBox["x", "TI"], "\[LessEqual]", 
+                   FractionBox["1", 
+                    StyleBox["a", "TI"]]}], "InlineFormula"]}]]}, {
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{"2", 
+                   StyleBox["l", "TI"], "+", "1"}], "InlineFormula"]}]], 
+             Cell[
+              TextData[{
+                Cell[
+                 RowBox[{
+                   StyleBox["x", "TI"], ">", 
+                   FractionBox["1", 
+                    StyleBox["a", "TI"]]}], "InlineFormula"]}]]}}, 
+           ColumnAlignments -> {Center, Center}], TraditionalForm]]], 
+        "InlineFormula"]]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {Center, {Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}], TraditionalForm]]], 
+  TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"x", "\[LessEqual]", " ", "a"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", " ", "+", " ", 
+        RowBox[{"Floor", "[", 
+         FractionBox[
+          RowBox[{"Log10", "[", 
+           FractionBox["x", "a"], "]"}], 
+          RowBox[{"Log10", "[", "w", "]"}]], "]"}]}], ",", 
+       RowBox[{"a", "<", "x", "\[LessEqual]", " ", "1"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"l", " ", "+", "1", " ", "+", " ", 
+        RowBox[{"Floor", "[", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"Log10", "[", 
+            RowBox[{"a", " ", "x"}], "]"}], " ", "+", " ", 
+           RowBox[{"(", 
+            RowBox[{"l", "*", " ", 
+             RowBox[{"Log10", "[", "w", "]"}]}], ")"}]}], 
+          RowBox[{"Log10", "[", "w", "]"}]], "]"}]}], ",", 
+       RowBox[{"1", "<", "x", "\[LessEqual]", " ", 
+        FractionBox["1", "a"]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", " ", "l"}], " ", "+", " ", "1"}], ",", 
+       RowBox[{"x", ">", 
+        FractionBox["1", "a"]}]}], "}"}]}], "}"}], "]"}], " "}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\\", "begin"}], 
+  RowBox[{"{", "array", "}"}], 
+  RowBox[{"{", "cc", "}"}]}], "\n", 
+ RowBox[{" ", 
+  RowBox[{"\\", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"&", "\\", "begin"}], 
+                 RowBox[{"{", "array", "}"}], 
+                 RowBox[{"{", "cc", "}"}], " ", "0"}], "&"}], " ", 
+               RowBox[{"x", "\\", "leq"}], " ", "a", " ", 
+               RowBox[{"\\\\", "\\", "left", "\\", "lfloor", "\\", "frac"}], 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\\", "log"}], " ", "_", 
+                 RowBox[{
+                  RowBox[{"{", "10", "}"}], "\\", "left"}], 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\\", "frac"}], 
+                   RowBox[{"{", "x", "}"}], 
+                   RowBox[{"{", "a", "}"}], "\\r", "ight"}], ")"}]}], "}"}], 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\\", "log"}], " ", "_", 
+                 RowBox[{"{", "10", "}"}], 
+                 RowBox[{"(", "w", ")"}]}], "}"}], "\\r", "ight", "\\r", 
+               "floor"}], "+", "1"}], "&"}], " ", "a"}], "<", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"x", "\\", "leq"}], " ", "1", " ", 
+             RowBox[{"\\\\", "\\", "left", "\\", "lfloor", "\\", "frac"}], 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"l", "\\", "log"}], " ", "_", 
+                RowBox[{"{", "10", "}"}], 
+                RowBox[{"(", "w", ")"}]}], "+", 
+               RowBox[{
+                RowBox[{"\\", "log"}], " ", "_", 
+                RowBox[{"{", "10", "}"}], 
+                RowBox[{"(", 
+                 RowBox[{"a", " ", "x"}], ")"}]}]}], "}"}], 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\\", "log"}], " ", "_", 
+               RowBox[{"{", "10", "}"}], 
+               RowBox[{"(", "w", ")"}]}], "}"}], "\\r", "ight", "\\r", 
+             "floor"}], "+", "l", "+", "1"}]}], "&"}], " ", "1"}], "<", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "\\", "leq", "\\", "frac"}], 
+          RowBox[{"{", "1", "}"}], 
+          RowBox[{"{", "a", "}"}], " ", "\\\\", " ", "2", " ", "l"}], "+", 
+         "1"}]}], "&"}], " ", "x"}], ">", 
+     RowBox[{
+      RowBox[{"\\", "frac"}], 
+      RowBox[{"{", "1", "}"}], 
+      RowBox[{"{", "a", "}"}], " ", 
+      RowBox[{"\\\\", "\\", "end"}], 
+      RowBox[{"{", "array", "}"}], " ", 
+      RowBox[{"\\\\", "\\", "end"}], 
+      RowBox[{"{", "array", "}"}]}]}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.6370092156216393`*^9, 3.6370092156216393`*^9}}]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2826, 71, 136, "Input"],
+Cell[CellGroupData[{
+Cell[3409, 95, 1020, 22, 31, "Input"],
+Cell[4432, 119, 1626, 33, 334, "Output"]
+}, Open  ]],
+Cell[6073, 155, 555, 17, 31, "Input"],
+Cell[6631, 174, 1981, 76, 1207, "Output"],
+Cell[8615, 252, 92, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[8732, 257, 917, 23, 48, "Input"],
+Cell[9652, 282, 3820, 71, 320, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13509, 358, 844, 24, 54, "Input"],
+Cell[14356, 384, 4021, 74, 332, "Output"]
+}, Open  ]],
+Cell[18392, 461, 3149, 84, 56, "Input"],
+Cell[21544, 547, 3149, 84, 56, "Input"],
+Cell[24696, 633, 3149, 84, 56, "Input"],
+Cell[27848, 719, 1263, 36, 55, "Input"],
+Cell[29114, 757, 2909, 77, 112, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
