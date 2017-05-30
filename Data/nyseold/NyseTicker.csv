@@ -1,0 +1,37 @@
+Name,Ticker,NewName,MergedWith,FateInSecondPeriod,HasSecondPeriod
+ahp,WYE,Wyeth,,,YES
+alcoa,AA,,,,YES
+amerb,FO,Fortune Brands,,,YES
+coke,KO,,,,YES
+comme,CMC,,,,YES
+dow,DOW,,,,YES
+dupont,DD,,,,YES
+ford,F,,,,YES
+ge,GE,,,,YES
+gm,GM,,,,YES
+hp,HPQ,,,,YES
+ibm,IBM,,,,YES
+inger,IR,,,,YES
+jnj,JNJ,,,,YES
+kimbc,KMB,,,,YES
+kinar,NGA,North American Galvanizing & Coatings Inc,,,YES
+kodak,EK,,,,YES
+merck,MRK,,,,YES
+mmm,MMM,,,,YES
+morris,MO,Altria,,,YES
+pandg,PG,,,,YES
+schlum,SLB,,,,YES
+sherw,SHW,,,,YES
+Arco,,,BP,,NO
+Espey,ESP,,,virtually no trading volume,NO
+Exxon,,,Exxon-Mobil,,NO
+Fischback,,,,N/A,NO
+Gte,,,Bell Atlantic,,NO
+Gulf,,,Chevron,,NO
+Iroquois,,,Niagara Bancorp Inc.,,NO
+Lukens,,,unnamed  third  party,,NO
+Mei_corp,,,,N/A,NO
+Mobil,,,Exxon-Mobil,,NO
+Pillsbury,,,,defunct,NO
+Sears,,,Kmart,,NO
+Texaco,,,Chevron ,,NO

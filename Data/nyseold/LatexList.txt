@@ -1,0 +1,37 @@
+3M Company & \checkmark & \checkmark \\
+Alcoa & \checkmark & \checkmark \\
+Altria Group & \checkmark & \checkmark \\
+Arco & \checkmark &  \\
+Coca Cola & \checkmark & \checkmark \\
+Commercial Metals & \checkmark & \checkmark \\
+Dow Chemical Company & \checkmark & \checkmark \\
+DuPont & \checkmark & \checkmark \\
+Eastman Kodak & \checkmark & \checkmark \\
+Espey Mfg. & Electronics Corp. & \checkmark &  \\
+Exxon Mobil & \checkmark &  \\
+Fischback & \checkmark &  \\
+Ford Motor Company & \checkmark & \checkmark \\
+Fortune Brands & \checkmark & \checkmark \\
+General Electric & \checkmark & \checkmark \\
+General Motors & \checkmark & \checkmark \\
+Gran Tierra Energy Inc. & \checkmark &  \\
+Gulf Oill & \checkmark &  \\
+Hewlett-Packard & \checkmark & \checkmark \\
+IBM & \checkmark & \checkmark \\
+Ingersoll-Rand Plc & \checkmark & \checkmark \\
+Iroquois Ltd. & \checkmark &  \\
+Johnson & Johnson & \checkmark & \checkmark \\
+Kimberly-Clark Corp & \checkmark & \checkmark \\
+Lukens & \checkmark &  \\
+Mei Corp. & \checkmark &  \\
+Merck & Company & \checkmark & \checkmark \\
+Mobil & \checkmark &  \\
+North American Galvanizing & Coatings Inc & \checkmark & \checkmark \\
+Pillsbury & \checkmark &  \\
+Procter & Gamble & \checkmark & \checkmark \\
+Schlumberger N.V. & \checkmark & \checkmark \\
+Sears & \checkmark &  \\
+Sherwin-Williams Company & \checkmark & \checkmark \\
+Texaco & \checkmark &  \\
+Wyeth & \checkmark & \checkmark \\
+
